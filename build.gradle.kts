@@ -22,6 +22,8 @@ val projectName: String by project
 val projectAuthor: String by project
 val projectDescription: String by project
 
+val gameDataFolder = file("game_data")
+
 group = projectGroupId
 version = projectVersion
 
@@ -66,6 +68,11 @@ dependencies {
     implementation("commons-codec:commons-codec:1.16.0")
     implementation("commons-io:commons-io:2.15.1")
     implementation("commons-logging:commons-logging:1.3.0")
+    implementation("org.apache.commons:commons-lang3:3.14.0")
+    implementation("org.apache.commons:commons-compress:1.25.0")
+    implementation("org.apache.commons:commons-csv:1.10.0")
+    implementation("org.apache.commons:commons-configuration2:2.9.0")
+
 
     /* [[ Classgraph ]] */
     implementation("io.github.classgraph:classgraph:4.8.165")
@@ -86,6 +93,8 @@ dependencies {
     implementation("org.tinylog:jcl-tinylog:2.6.2")
     implementation("org.tinylog:jsl-tinylog:2.6.2")
     implementation("org.tinylog:jul-tinylog:2.6.2")
+
+    implementation("tw.edu.ntu.csie:libsvm:3.31")
 }
 
 java {
