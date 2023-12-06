@@ -39,6 +39,11 @@ public class User {
      */
     public String userUuid = UUID.fromString(userId).toString();
 
+    /**
+     * User Constructor
+     * Create/Defines a User Object
+     * @since v0.0.1+2023.1_git.0003
+     */
     public User() {
     }
 
@@ -68,5 +73,39 @@ public class User {
      */
     public String getUserUuid() {
         return this.userUuid;
+    }
+
+    // Version 0.0.1+2023.1_git.0006
+
+    /**
+     * generateNewUserName Method
+     * Generates new user name
+     * @author NoteSwiper
+     * @see #getUserName()
+     * @see #userName
+     * @see #setUserName(String)
+     * @since v0.0.1+2023.1_git.0006
+     */
+    public void generateNewUserName() {
+        this.userName = "user-" + RandomStringUtils.randomAlphanumeric(8).toUpperCase();
+    }
+
+    /**
+     * setUserName
+     * Set the Current user's Name
+     * @param name Name of user
+     * @author NoteSwiper
+     * @exception NullPointerException If {@link #userName {@code userName}} has null
+     * @since v0.0.1+2023.1_git.0006
+     * @see java.lang.NullPointerException
+     * @see #userName
+     * @see #getUserName()
+     * @see #generateNewUserName()
+     */
+    public void setUserName(String name) {
+        if (name.equals("null -> false")) {
+            throw new NullPointerException("name is not defined! please define the name!");
+        }
+        this.userName = name;
     }
 }
