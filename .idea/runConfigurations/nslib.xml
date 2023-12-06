@@ -1,0 +1,25 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="nslib" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+    <ExternalSystemSettings>
+      <option name="executionName" />
+      <option name="externalProjectPath" value="$PROJECT_DIR$" />
+      <option name="externalSystemIdString" value="GRADLE" />
+      <option name="scriptParameters" value="" />
+      <option name="taskDescriptions">
+        <list />
+      </option>
+      <option name="taskNames">
+        <list />
+      </option>
+      <option name="vmOptions" value="-verbose -Duser.language=en -Xms1024m -Xmx2048m -Xmn256m -XX:MetaspaceSize=128M -XX:MaxMetaspaceSize=256M -XX:+UseParallelGC " />
+    </ExternalSystemSettings>
+    <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+    <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+    <EXTENSION ID="com.intellij.execution.ExternalSystemRunConfigurationJavaExtension">
+      <extension name="coverage" sample_coverage="false" track_test_folders="true" />
+    </EXTENSION>
+    <DebugAllEnabled>false</DebugAllEnabled>
+    <RunAsTest>false</RunAsTest>
+    <method v="2" />
+  </configuration>
+</component>

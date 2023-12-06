@@ -1,19 +1,38 @@
 package git.noteswiper;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.awt.geom.RoundRectangle2D;
+
 // Shift を 2 回押して 'どこでも検索' ダイアログを開き、`show whitespaces` と入力して
 // Enter キーを押します。これでコードに空白文字が表示されます。
 public class Main {
     public static void main(String[] args) {
-        // ハイライトされたテキストにキャレットがある状態で Alt+Enter を押して
-        // IntelliJ IDEA が提案する修正方法を表示します。
-        System.out.printf("Hello and welcome!");
+        JFrame.setDefaultLookAndFeelDecorated(true);
+        SwingUtilities.invokeLater(Main::createWindow);
+    }
 
-        // コードを実行するには Shift+F10 を押すか、ガターにある緑の矢印ボタンをクリックします。
-        for (int i = 1; i <= 5; i++) {
+    private static void createWindow() {
+        JFrame frame = new JFrame("Main");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        createUI(frame);
+        frame.setVisible(true);
+    }
 
-            // Shift+F9 を押してコードのデバッグを開始します。ブレークポイントを 1 つ設定しましたが、
-            // Ctrl+F8 を押すといつでも他のブレークポイントを追加できます。
-            System.out.println("i = " + i);
-        }
+    private static void createUI(final JFrame frame) {
+        frame.setLayout(new GridBagLayout());
+        frame.setSize(200,200);
+        frame.setLocationRelativeTo(null);
+        frame.add(new JButton("Hello World"));
+
+        frame.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                frame.setShape(new RoundRectangle2D.Double(0,0,frame.getWidth(),
+                        frame.getHeight(), 20, 20));
+            }
+        });
     }
 }

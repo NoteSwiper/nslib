@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run Application" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="git.noteswiper.Main" />
+    <module name="nslib.main" />
+    <option name="VM_PARAMETERS" value="-verbose -Duser.language=en -Xms1024m -Xmx2048m -Xmn256m -XX:MetaspaceSize=128M -XX:MaxMetaspaceSize=256M -XX:+UseParallelGC " />
+    <extension name="coverage" sample_coverage="false" track_test_folders="true" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
